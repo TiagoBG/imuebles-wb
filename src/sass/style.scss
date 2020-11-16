@@ -1,0 +1,10 @@
+$color-fondo: rgb(245, 143, 143);
+$color-fondo1: rgb(143, 208, 245);
+body {
+    @if 2<1 {
+        background-color: $color-fondo;
+    }
+    @else {
+        background-color: $color-fondo1;
+    }
+}
