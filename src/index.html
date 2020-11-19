@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Inmuebles</title>
+</head>
+
+<body>
+    <main class="container-fluid">
+
+        <header class="header">
+            <section class="row mt-3">
+                <article class="col-1">
+                    <img class="img-fluid" src="./images/logo.png" alt="Logo" />
+                </article>
+                <article class="col-7">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mensualidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contactenos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </article>
+                <article class="col-4">
+                    <form class="form-inline my-2 my-lg-0" action="">
+                        <input class="form-control mt-2" placeholder="Buscar" type="search">
+                        <input type="submit" value="Buscar" class="btn btn-outline-info mt-2 ml-2">
+                    </form>
+                </article>
+            </section>
+            <section class="row mt-4">
+                <article class="col-12 banner">
+                    <img src="./images/banner_img_1.jpg" alt="" class="img-fluid card-img img-banner">
+                    <div class="banner-title">Mensualidad</div>
+                    <div class="banner-title-1">Conjunto Residencial</div>
+                </article>
+            </section>
+        </header>
+
+        <section id="main" class="mt-4">
+            <article class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a href="#crear-mensualidad" class="nav-link active" data-toggle="tab" id="crear-mensualidad-tab">Crear Mensualidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ver-estadistica" class="nav-link" data-toggle="tab" id="ver-estadistica-tab">Ver Estadística</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content" id="content-tab">
+                        <div class="tab-pane fade show active" id="crear-mensualidad" role="tabpanel">
+                            <article class="row">
+                                <div class="col-10">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fas fa-search-plus"></i>
+                                            </div>
+                                        </div>
+                                        <input type="search" placeholder="filtrar" class="form-control" aria-label="search">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-info" type="button"><i class="fas fa-search-plus"></i></button>
+                                    <button class="btn btn-primary" type="button" id="btn-adicionar" data-toggle="modal" data-target="#modalMensualidad"><i class="fas fa-plus"></i></button>
+
+                                </div>
+                            </article>
+                            <article class="row mt-4">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Edad</th>
+                                            <th>Género</th>
+                                            <th>Total a pagar</th>
+                                            <th>Fecha de mensualidad</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Carlos Restrepo</td>
+                                            <td>26</td>
+                                            <td>Masculino</td>
+                                            <td>$800.000</td>
+                                            <td>2020-05-10</td>
+                                            <td>
+                                                <a href="#" class="btn btn-link">Ver</a>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                            </article>
+                        </div>
+                        <div class="tab-pane fade" id="ver-estadistica" role="tabpanel">
+                            Ver Estadística
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <section class="modal fade" id="modalMensualidad" tabindex="-1" aria-labelledby="modalMensualidad" aria-hidden="true" role="dialog">
+        <article class="modal-dialog modal-lg">
+            <article class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nueva Mensualidad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="frm-mensualidad">
+                        <article class="card">
+                            <div class="card-header">Datos de propietario</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="nombre_propietario">Nombre(*)</label>
+                                            <input type="text" id="nombre_propietario" class="form-control" placeholder="Agregar nombre de propietario" value="Tatianna" maxlength="10" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="doc_propietario">Documento(*)</label>
+                                            <input type="number" id="doc_propietario" class="form-control" placeholder="Agregar el número de documento" value="487659" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"></div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-header">Datos del inmueble en la mensualidad</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="metros_cuadrados">Metros<sup>2</sup> (*)</label>
+                                            <input type="number" id="metros_cuadrados" class="form-control" placeholder="Agregar metros cuadrados" value="90" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="tipo_inmueble">Tipo inmueble (*)</label>
+                                            <div>
+                                                <div class="form-check-inline">
+                                                    <input type="radio" name="tipo_inmueble" class="form-check-input" value="A" id="tipo_inmeble_A">
+                                                    <label class="form-check-label" for="tipo_inmeble_A">Apartamento</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="radio" name="tipo_inmueble" class="form-check-input" value="C" id="tipo_inmeble_C">
+                                                    <label class="form-check-label" for="tipo_inmeble_C">Casa</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"></div>
+                            </div>
+                        </article>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" id="btn-guardar-mensualidad">Guardar</button>
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Salir</button>
+                </div>
+            </article>
+        </article>
+    </section>
+
+
+    <footer class="footer">Desarrollado por Santiago Betancur Graciano</footer>
+
+</body>
+
+</html>
